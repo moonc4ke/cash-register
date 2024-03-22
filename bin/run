@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+puts "Welcome to the Cash Register"
+cart = Cart.new(DEFAULT_DISCOUNTS)
+
+loop do
+  puts "Enter product code (GR1, SR1, CF1) or 'done' to finish:"
+  input = gets.chomp
+  break if input.downcase == 'done'
+  
+  case input.upcase
+  when 'GR1'
+    cart.add(Product.new(code: 'GR1', name: 'Green Tea', price: 3.11))
+  when 'SR1'
+    cart.add(Product.new(code: 'SR1', name: 'Strawberries', price: 5.00))
+  when 'CF1'
+    cart.add(Product.new(code: 'CF1', name: 'Coffee', price: 11.23))
+  else
+    puts "Unknown product code."
+  end
+end
+
+puts "Total price: #{'%.2f' % cart.total}€"
