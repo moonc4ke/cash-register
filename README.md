@@ -45,7 +45,9 @@ This will run all the unit tests for the product, cart, and discount classes.
 
 ## Extending the Application
 
-If you want to add more features or modify the existing logic:
+Rails is used with the intention to make this CLI application as extendable as possible. The framework provides the flexibility to evolve the app into a web interface or an API service in the future, should the need arise.
+
+To add more features or modify the existing logic:
 
 - Add new product types or discount rules in the `app/models` directory.
 - Update the `bin/run` file to include any new user interactions.
