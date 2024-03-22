@@ -1,24 +1,52 @@
-# README
+# Cash Register Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Ruby on Rails command line application that simulates a cash register.
 
-Things you may want to cover:
+## System Requirements
 
-* Ruby version
+- Ruby (version as specified in `.ruby-version` or `Gemfile`)
+- Bundler (check Gemfile for the required version)
+- Rails (version as specified in the `Gemfile`)
 
-* System dependencies
+## Setup
 
-* Configuration
+To set up the project, follow these steps:
 
-* Database creation
+1. Clone the repository:
+   ```
+   git clone https://github.com/moonc4ke/cash-register.git
+   cd cash-register
+   ```
 
-* Database initialization
+2. Install the required gems:
+   ```
+   bundle install
+   ```
 
-* How to run the test suite
+## Running the Application
 
-* Services (job queues, cache servers, search engines, etc.)
+To run the cash register application, use the following command:
 
-* Deployment instructions
+```
+ruby bin/run
+```
 
-* ...
+Follow the prompts to add products to your cart and calculate the total price with applicable discounts.
+
+## Testing
+
+To run the tests for the project, execute:
+
+```
+rails test
+```
+
+This will run all the unit tests for the product, cart, and discount classes.
+
+## Extending the Application
+
+If you want to add more features or modify the existing logic:
+
+- Add new product types or discount rules in the `app/models` directory.
+- Update the `bin/run` file to include any new user interactions.
+- Make sure to add corresponding tests in the `test/models` directory.
